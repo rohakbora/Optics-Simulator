@@ -208,9 +208,9 @@ def health():
     """Health check endpoint"""
     return jsonify({"status": "ok", "api_key_set": bool(OPENROUTER_API_KEY)})
 
-# Vercel serverless function handler
-def handler(event, context):
-    return app(event, context)
+# Vercel serverless function handler (disabled — use `backend/api/index.py` for Vercel)
+# def handler(event, context):
+#     return app(event, context)
 
 if __name__ == "__main__":
     if not OPENROUTER_API_KEY:
