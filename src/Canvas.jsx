@@ -572,7 +572,7 @@ export default function OpticalDesigner() {
     
     setLlmLoading(true);
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const apiUrl = import.meta.env.VITE_API_URL || "https://optics-simulator-bice.vercel.app:5000";
       const response = await fetch(`${apiUrl}/api/generate`, {
         method: "POST",
         headers: {
