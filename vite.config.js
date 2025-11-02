@@ -11,4 +11,8 @@ export default defineConfig({
     }),
   ],
   assetsInclude: ['**/*.svg'],
+  build: {
+    outDir: 'dist', // <-- ensures correct output folder for Vercel
+  },
+  base: './', // <-- prevents 404s on refresh or subroutes
 })
